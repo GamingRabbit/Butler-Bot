@@ -205,7 +205,7 @@ async def grhrr():
 @client.command(pass_context=True)
 async def commands(ctx):
     await client.add_reaction(ctx.message,'\N{white heavy check mark}')
-    embed = discord.Embed(title="Commands:", description="  `ping`     shows the ping of the Bot\n `counter`    shows a little server info\n `rps`    Play Rock Paper scissors with the Bot\n `say`\n `double`    doubles a number\n `square`     squares a number\n `hey`     answers a question with yes or no \n `about`\n `kick`     kicks a member(role `kicker` required)\n `ban`    bans a member\n `joined`      gives out the jointime (in UTC)\n `info`    infos about a member\you\n\n\n`use James,help (command) for more help with the command`", color=0x00ff00)
+    embed = discord.Embed(title="Commands:", description="  `ping`     shows the ping of the Bot\n `Invite`    Invites the Bot\n `counter`    shows a little server info\n `rps`    Play Rock Paper scissors with the Bot\n `say`\n `double`    doubles a number\n `square`     squares a number\n `hey`     answers a question with yes or no \n `about`\n `kick`     kicks a member(role `kicker` required)\n `ban`    bans a member\n `joined`      gives out the jointime (in UTC)\n `info`    infos about a member\you\n\n\n`use James,help (command) for more help with the command`", color=0x00ff00)
     await client.say(embed=embed)
     await client.send_message(ctx.message.author, embed=embed)
 
