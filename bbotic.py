@@ -268,6 +268,6 @@ async def reload(ctx,extension_name : str):
 @client.command(aliases = ["invite"])
 async def Invite():
     await client.say("Heres my Invite link: https://discordapp.com/api/oauth2/authorize?client_id=468353740903022592&permissions=8&scope=bot")
-
+    await client.say("also feel free to join my Server : https://discord.gg/qHAXdJw")
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
