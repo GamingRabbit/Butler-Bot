@@ -171,7 +171,7 @@ async def ban(ctx, userName: discord.User):
     await client.say("sucessfully banned, sir!")
 
 @client.command()
-async def say(message):
+async def say(*,message):
          await client.say(message)
 
 @client.command(name="rps",
