@@ -32,7 +32,7 @@ async def hey(ctx):
     responses =["That is a resounding no", "It is not looking likely", "Too hard to tell", "It is quite possible", "Definitely", "no, sir", "yes", "of course!"]
     await client.say(random.choice(responses))
     
-@client.command(pass_context=True)
+@client.command(pass_context=True, case_insensitive=True)
 @commands.has_role('User')
 async def counter(ctx):
     embed = discord.Embed(title="Counter", description="Server info", color=0x6FA8DC)
