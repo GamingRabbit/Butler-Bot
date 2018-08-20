@@ -27,13 +27,11 @@ async def list_servers():
         await asyncio.sleep(600)
 
 @client.command()
-@commands.has_role('User')
 async def hey(ctx):
     responses =["That is a resounding no", "It is not looking likely", "Too hard to tell", "It is quite possible", "Definitely", "no, sir", "yes", "of course!"]
     await client.say(random.choice(responses))
     
 @client.command(pass_context=True)
-@commands.has_role('User')
 async def counter(ctx):
     embed = discord.Embed(title="Counter", description="Server info", color=0x6FA8DC)
     embed.add_field(name="Name", value=ctx.message.server.name)
@@ -47,19 +45,16 @@ async def about(ctx):
     await client.say(embed=embed)
     
 @client.command()
-@commands.has_role('User')
 async def square(number):
     squared_value = int(number) * int(number)
     await client.say(str(number) + " squared is " + str(squared_value))
 
 @client.command()
-@commands.has_role('User')
 async def double(number):
     squared_value = int(number) + int(number)
     await client.say(str(number) + " x2 is " + str(squared_value))
 
 @client.command(pass_context=True)
-@commands.has_role('VIP')
 async def apartment(ctx):
     user = ctx.message.author
     role = discord.utils.get(user.server.roles, name="apartement")
@@ -75,7 +70,6 @@ async def apartment(ctx):
                 brief="should I go",
                 aliases=['location', 'b', 'ughno'],
                 pass_context=True)
-@commands.has_role('User')
 async def nineteen_ball(context):
     possible_responses = [
         'Go left, sir',
@@ -94,7 +88,6 @@ async def nineteen_ball(context):
                 brief="I would (your question) what would you do",
                 aliases=['what', 'would', 'happen'],
                 pass_context=True)
-@commands.has_role('User')
 async def nineninenine_ball(context):
     possible_responses = [
         'I would run away',
@@ -115,7 +108,6 @@ async def nineninenine_ball(context):
                 brief="this funny",
                 aliases=['is', 'this', 'funny'],
                 pass_context=True)
-@commands.has_role('VIP')
 async def fortwenty_ball(context):
     possible_responses = [
         'If you call this funny I dont longer want to be friends with you',
@@ -134,7 +126,6 @@ async def fortwenty_ball(context):
                 brief="won",
                 aliases=['u', 'have', 'won'],
                 pass_context=True)
-@commands.has_role('User')
 async def fuck_yeah(context):
     possible_responses = [
         'ok',
@@ -147,7 +138,6 @@ async def fuck_yeah(context):
                 brief="ok",
                 aliases=['o', 'k', 'okey'],
                 pass_context=True)
-@commands.has_role('VIP')
 async def ok_questionmark(context):
     possible_responses = [
         'ok',
@@ -159,13 +149,13 @@ async def ok_questionmark(context):
     await client.say(random.choice(possible_responses))    
 
 @client.command(pass_context = True)
-@commands.has_role('Kicker')
+@commands.has_permissions(kick_members = True) 
 async def kick(ctx, userName: discord.User):
     await client.kick(userName)
     await client.say("sucessfully kicked, sir!")
 
 @client.command(pass_context = True)
-@commands.has_role('Kicker')
+@commands.has_permissions(ban_members = True) 
 async def ban(ctx, userName: discord.User):
     await client.ban(userName)
     await client.say("sucessfully banned, sir!")
