@@ -198,7 +198,7 @@ async def grhrr():
 @client.command(pass_context=True)
 async def commands(ctx):
     await client.add_reaction(ctx.message,'\N{white heavy check mark}')
-    embed = discord.Embed(title="Commands:", description="  `ping`     shows the ping of the Bot\n `Invite`    Invites the Bot\n `changelog`    shows the versions changelog\n `counter`    shows a little server info\n `rps`    Play Rock Paper scissors with the Bot\n `say`\n `double`    doubles a number\n `square`     squares a number\n `hey`     answers a question with yes or no \n `about`\n `kick`     kicks a member(role `kicker` required)\n `ban`    bans a member\n `joined`      gives out the jointime (in UTC)\n `info`    infos about a member\you\n\n\n`use James,help (command) for more help with the command`", color=0x00ff00)
+    embed = discord.Embed(title="Commands:", description="  `ping`     shows the ping of the Bot\n `Invite`    Invites the Bot\n `vote`    gives the link to vote the bot up on discordbots.org(why should you do this?!)\n `changelog`    shows the versions changelog\n `counter`    shows a little server info\n `rps`    Play Rock Paper scissors with the Bot\n `say`\n `double`    doubles a number\n `square`     squares a number\n `hey`     answers a question with yes or no \n `about`\n `kick`     kicks a member(role `kicker` required)\n `ban`    bans a member\n `joined`      gives out the jointime (in UTC)\n `info`    infos about a member\you\n\n\n`use James,help (command) for more help with the command`", color=0x00ff00)
     await client.say(embed=embed)
     await client.send_message(ctx.message.author, embed=embed)
 
@@ -272,5 +272,10 @@ async def reload(ctx,extension_name : str):
 async def Invite():
     await client.say("Heres my Invite link: https://discordapp.com/api/oauth2/authorize?client_id=468353740903022592&permissions=8&scope=bot")
     await client.say("also feel free to join my Server : https://discord.gg/qHAXdJw")
+
+@client.command()
+async def vote():
+    await client.say("You really want to vote ME up on discordbots.org? Are you sure, you only can vote every 12 hours... If you really want to vote me up thanks heres my link:https://discordbots.org/bot/468353740903022592")
+
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
