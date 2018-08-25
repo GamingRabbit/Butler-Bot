@@ -186,7 +186,7 @@ async def on_member_join(Member):
     await client.send_message(Member, "Hello, I'm `James the Butler Bot`, welcome to the Server!")
     role = discord.utils.get(Member.server.roles,  name="Unverified")
     await client.add_roles(Member, role)
-    if Member.server.id == '482854003458310144':
+    if Member.server == '482854003458310144':
         await client.send_message(Member,"Test.")
     
     
