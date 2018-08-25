@@ -54,7 +54,7 @@ async def double(number):
     squared_value = int(number) + int(number)
     await client.say(str(number) + " x2 is " + str(squared_value))
 
-@client.command(pass_context=True)
+@client.command(pass_context=True,hidden=True)
 async def apartment(ctx):
     user = ctx.message.author
     role = discord.utils.get(user.server.roles, name="apartement")
@@ -69,7 +69,7 @@ async def apartment(ctx):
                 description="should I go",
                 brief="should I go",
                 aliases=['location', 'b', 'ughno'],
-                pass_context=True)
+                pass_context=True, hidden=True)
 async def nineteen_ball(context):
     possible_responses = [
         'Go left, sir',
@@ -87,7 +87,7 @@ async def nineteen_ball(context):
                 description="I would (your question) what would you do",
                 brief="I would (your question) what would you do",
                 aliases=['what', 'would', 'happen'],
-                pass_context=True)
+                pass_context=True,hidden=True)
 async def nineninenine_ball(context):
     possible_responses = [
         'I would run away',
@@ -107,7 +107,7 @@ async def nineninenine_ball(context):
                 description="this funny(your question/joke/video)",
                 brief="this funny",
                 aliases=['is', 'this', 'funny'],
-                pass_context=True)
+                pass_context=True,hidden=True)
 async def fortwenty_ball(context):
     possible_responses = [
         'If you call this funny I dont longer want to be friends with you',
@@ -125,7 +125,7 @@ async def fortwenty_ball(context):
                 description="won",
                 brief="won",
                 aliases=['u', 'have', 'won'],
-                pass_context=True)
+                pass_context=True,hidden=True)
 async def fuck_yeah(context):
     possible_responses = [
         'ok',
@@ -170,8 +170,8 @@ async def say(*,message):
 async def rps(message):
     rand = random.randint(0,2)
     user_choice=message
-    choices = ["paper", "scissors", "rock"]
-    outcome_list = ["draw", "lose", "win"]
+    choices = ["paper","Paper","Scissors","Rock","PAPER","SCISSORS","ROCK", "scissors", "rock"]
+    outcome_list = ["did not win and you did not lost, it's a draw", "lose", "win"]
     result =(choices.index(user_choice)+rand)%3
     await client.say("I chose {}, you {}".format(choices[result], outcome_list[rand]))
 
