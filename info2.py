@@ -27,8 +27,8 @@ class Members():
     @commands.command(pass_context=True)
     async def changelog(self):
       em = discord.Embed()
-    em.add_field(name='0.8. and previous versions', value='I don"t remeber everything what I"ve done in every version')
-    em.add_field(name='0.9.',  value='added a new Cog called Info2')
+      em.add_field(name='0.8. and previous versions', value='I don"t remeber everything what I"ve done in every version')
+      em.add_field(name='0.9.',  value='added a new Cog called Info2')
 
 def setup(client):
     client.add_cog(Members(client))
