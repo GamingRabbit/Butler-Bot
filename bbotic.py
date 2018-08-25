@@ -186,9 +186,6 @@ async def on_member_join(Member):
     await client.send_message(Member, "Hello, I'm `James the Butler Bot`, welcome to the Server!")
     role = discord.utils.get(member.server.roles,  name="Unverified")
     await client.add_roles(member, role)
-      
-    else:
-        pass
     
     
 
