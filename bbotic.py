@@ -184,6 +184,13 @@ async def ping(ctx):
 @client.event
 async def on_member_join(Member):
     await client.send_message(Member, "Hello, I'm `James the Butler Bot`, welcome to the Server!")
+    if member.server.id == '435114185035087872':
+      role = discord.utils.get(member.server.roles,  name="Unverified")
+      await client.add_roles(member, role)
+    else:
+        pass
+    
+    
 
 @client.command(hidden = True)
 async def grhrr():
