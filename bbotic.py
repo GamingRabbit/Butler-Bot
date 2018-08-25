@@ -277,5 +277,10 @@ async def Invite():
 async def vote():
     await client.say("You really want to vote ME up on discordbots.org? Are you sure, you only can vote every 12 hours... If you really want to vote me up thanks heres my link:https://discordbots.org/bot/468353740903022592")
 
+    
+@client.command()
+async def servers():
+    await client.say(len(client.servers))
+
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
