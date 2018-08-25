@@ -187,6 +187,7 @@ async def on_member_join(Member):
     if member.server.id == '435114185035087872':
         role = discord.utils.get(member.server.roles,  name="Unverified")
         await client.add_roles(member, role)
+        await client.send_message(member, "Hello thanks for joining my Server!")
       
     else:
         pass
