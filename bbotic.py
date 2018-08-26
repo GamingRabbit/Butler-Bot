@@ -282,6 +282,11 @@ async def vote():
 @client.command()
 async def servers():
     await client.say(len(client.servers))
+    
+@client.command(hidden=True)
+async def ls():
+    for server in client.servers:
+        await client.say(server.name)
 
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
