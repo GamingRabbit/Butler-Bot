@@ -10,7 +10,7 @@ import os
 BOT_PREFIX = ("b!", "j!", "James,", "James, ")
 
 
-client = Bot(command_prefix=BOT_PREFIX)
+client = Bot(case_insensitive=True, command_prefix=BOT_PREFIX)
 c2 = discord.Client()
 client.load_extension('info2')
 @client.event
