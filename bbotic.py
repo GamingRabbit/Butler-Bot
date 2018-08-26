@@ -32,12 +32,12 @@ async def hey(ctx):
     await client.say(random.choice(responses))
     
 @client.command(pass_context=True)
-async def counter(ctx, member:discord.Member):
+async def counter(ctx, member):
     embed = discord.Embed(title="Counter", description="Server info", color=0x6FA8DC)
     embed.add_field(name="Name", value=ctx.message.server.name)
     embed.add_field(name="Owner", value=ctx.message.server.owner.mention)
     embed.add_field(name="Members", value=ctx.message.server.member_count)
-    embed.set_thumbnail(url=member.server.icon)
+    embed.set_thumbnail(url=message.server.icon)
     await client.say(embed=embed)
 
 @client.command(pass_context=True)
