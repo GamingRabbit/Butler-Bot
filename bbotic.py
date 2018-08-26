@@ -171,7 +171,7 @@ async def say(*,message):
 async def rps(message):
     rand = random.randint(0,2)
     user_choice=message
-    choices = ["paper","Paper","Scissors","Rock","PAPER","SCISSORS","ROCK", "scissors", "rock"]
+    choices = ["paper", "scissors", "rock"]
     outcome_list = ["did not win and you did not lost, it's a draw", "lose", "win"]
     result =(choices.index(user_choice)+rand)%3
     await client.say("I chose {}, you {}".format(choices[result], outcome_list[rand]))
