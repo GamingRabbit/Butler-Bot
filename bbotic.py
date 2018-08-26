@@ -216,7 +216,7 @@ async def Terminal(ctx):
     resp = await client.send_message(channel,'`Loading`')
     diff = resp.timestamp - ctx.message.timestamp
     await client.edit_message(resp, '` Ping: {:.1f}ms.`'.format(1000*diff.total_seconds()))
-    await client.send_message(channel,"-------------------------- \n `Terminal commands:`\n `stdown`\n `status`\n `load`\n `unload`\n `reload`\n ---------------------------")
+    await client.send_message(channel,"-------------------------- \n `Terminal commands:`\n `stdown`\n `status`\n `load`\n `unload`\n `ls`\n `reload`\n ---------------------------")
 
 @client.command(pass_context=True, hidden=True)
 async def stdown(ctx):
