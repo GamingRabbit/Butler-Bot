@@ -283,10 +283,11 @@ async def vote():
 async def servers():
     await client.say(len(client.servers))
     
-@client.command(hidden=True)
-async def ls():
-    for server in client.servers:
-        await client.say(server.name)
+@client.command(hidden=True, pass_context=True)
+async def ls(ctx):
+    if ctx.message.author.id == '353501847324983299':
+        for server in client.servers:
+            await client.say(server.name)
 
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
