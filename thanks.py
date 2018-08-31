@@ -1,3 +1,7 @@
+import discord
+from discord.ext import commands
+
+
 @commands.command(name="thanks",
                 aliases = ["Thanks"],
                 pass_context= True)
