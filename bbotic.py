@@ -283,6 +283,10 @@ async def vote():
 async def servers():
     await client.say(len(client.servers))
     
+@client.command()
+async def Usrs():
+    await client.say(len(client.server.members))
+    
 @client.command(hidden=True, pass_context=True)
 async def ls(ctx):
     if ctx.message.author.id == '353501847324983299':
