@@ -13,5 +13,5 @@ class Thanks():
         await client.say(embed = tanks)
 
     
-    def setup(client):
-    client.add_cog(Thanks(client))
+def setup(client):
+client.add_cog(Thanks(client))
