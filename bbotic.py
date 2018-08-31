@@ -276,7 +276,7 @@ async def Invite():
 
 @client.command()
 async def vote():
-    await client.say("You really want to vote ME up on discordbots.org? Are you sure, you only can vote every 12 hours... If you really want to vote me up thanks heres my link:https://discordbots.org/bot/468353740903022592")
+    await client.say("You really want to vote ME up on discordbots.org? If you really want to vote me up thanks heres my link:https://discordbots.org/bot/468353740903022592")
 
     
 @client.command()
