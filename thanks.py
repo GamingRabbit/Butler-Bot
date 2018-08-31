@@ -14,4 +14,4 @@ class Thanks():
 
     
 def setup(client):
-client.add_cog(Thanks(client))
+    client.add_cog(Thanks(client))
