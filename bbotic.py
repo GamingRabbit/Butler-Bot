@@ -289,6 +289,10 @@ async def ls(ctx):
     if ctx.message.author.id == '353501847324983299':
         for server in client.servers:
             await client.say(server.name)
+            
+@client.command()
+async def USRS():
+    await client.say(len(client.users))
 
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
