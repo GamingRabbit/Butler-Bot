@@ -283,9 +283,6 @@ async def vote():
 async def servers():
     await client.say(len(client.servers))
     
-@client.command()
-async def Usrs():
-    await client.say(len(client.users))
     
 @client.command(hidden=True, pass_context=True)
 async def ls(ctx):
