@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class Thanks()
+class Thanks():
     def __init__(self, client):
         self.client = client
 
