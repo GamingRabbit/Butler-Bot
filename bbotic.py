@@ -285,7 +285,7 @@ async def servers():
     
 @client.command()
 async def Usrs():
-    await client.say(len(client.server.members))
+    await client.say(len(client.servers.members))
     
 @client.command(hidden=True, pass_context=True)
 async def ls(ctx):
