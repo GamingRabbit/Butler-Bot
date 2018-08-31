@@ -293,7 +293,7 @@ async def ls(ctx):
 @client.command()
 async def USRS():
     usrs = [client.get_all_members()]
-    await client.say(len(client.get_all_members()))
+    await client.say(len(usrs))
 
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
