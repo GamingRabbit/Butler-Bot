@@ -10,7 +10,7 @@ import os
 class DiscordBotsOrgAPI:
     """Handles interactions with the discordbots.org API"""
 
-    def __init__(self, bot):
+    def __init__(self, client):
         self.client = client
         self.token = os.getenv('DBLT')  #  set this to your DBL token
         self.dblpy = dbl.Client(self.client, self.token)
