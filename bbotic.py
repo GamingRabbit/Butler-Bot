@@ -14,7 +14,7 @@ client = Bot(command_prefix=BOT_PREFIX)
 c2 = discord.Client()
 client.load_extension('info2')
 client.load_extension('thanks')
-"""client.load_extension('dbl')"""
+client.load_extension('dbl')
 @client.event
 async def on_ready():
     await client.change_presence(game=Game(name="Use James,commands"))
