@@ -1,2 +1,2 @@
 discord.py
-git+https://github.com/DiscordBotList/DBL-Python-Library
+
