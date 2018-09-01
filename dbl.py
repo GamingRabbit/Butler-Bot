@@ -8,7 +8,7 @@ import logging
 import os
 
 class DiscordBotsOrgAPI:
-    """Handles interactions with the discordbots.org API"""
+    """"""Handles interactions with the discordbots.org API""""""
 
     def __init__(self, client):
         self.client = client
@@ -17,7 +17,7 @@ class DiscordBotsOrgAPI:
         self.client.loop.create_task(self.update_stats())
 
     async def update_stats(self):
-        """This function runs every 30 minutes to automatically update your server count"""
+        """"""This function runs every 30 minutes to automatically update your server count""""""
 
         while True:
             logger.info('attempting to post server count')
