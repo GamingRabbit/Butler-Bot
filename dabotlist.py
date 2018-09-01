@@ -1,4 +1,4 @@
-"""import dbl
+import dbl
 import discord
 from discord.ext import commands
 
@@ -33,4 +33,3 @@ def setup(client):
     global logger
     logger = logging.getLogger('client')
     client.add_cog(DiscordBotsOrgAPI(client))
-"""
