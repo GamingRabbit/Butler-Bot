@@ -10,7 +10,7 @@ import sys
 import traceback
 
 
-BOT_PREFIX = ("b!", "j!", "James,", "James, ")
+BOT_PREFIX = ("j!", "James,", "James, ")
 
 
 client = Bot(command_prefix=BOT_PREFIX)
