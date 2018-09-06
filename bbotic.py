@@ -299,7 +299,7 @@ async def USRS():
     
 @client.event
 async def on_command_error(ctx, error):
-    if isinstance(error, commands.CommandNotFound):
+    if isinstance(error, commands.NotFound):
         await client.say("Command Not Found")
 
 client.loop.create_task(list_servers())
