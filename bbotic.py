@@ -297,10 +297,7 @@ async def USRS():
     usrs = list(client.get_all_members())
     await client.say(len(usrs))
     
-@client.event
-async def on_command_error(ctx, error):
-    if isinstance(error, commands.NotFound):
-        await client.say("Command Not Found")
+
 
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
