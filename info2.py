@@ -29,7 +29,6 @@ class Members():
       em = discord.Embed()
       em.add_field(name='0.8. and previous versions', value='I don"t remeber everything what I"ve done in every version')
       em.add_field(name='0.9.',  value='added a new Cog called Info2\n')
-      em.add_field(name='.', value='.')
       em.add_field(name='1.0.0', value='added some new cogs and made a new support server.\n')
       em.add_field(name='1.0.0.1', value='fixed the changelog')
       await self.client.say(embed=em)
