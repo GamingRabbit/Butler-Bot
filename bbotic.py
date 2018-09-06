@@ -296,7 +296,8 @@ async def ls(ctx):
 async def USRS():
     usrs = list(client.get_all_members())
     await client.say(len(usrs))
-    
+
+@client.event    
 async def on_command_error(self, error: Exception, ctx: commands.Context):
     if isinstance(error, commands.CommandNotFound):
         await client.say("Error, command not found!")
