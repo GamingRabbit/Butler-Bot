@@ -298,7 +298,7 @@ async def USRS():
     await client.say(len(usrs))
     
 @client.event
-async def on_command_error(error):
+async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
         await client.say("Command Not Found")
 
