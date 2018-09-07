@@ -18,6 +18,7 @@ c2 = discord.Client()
 client.load_extension('info2')
 client.load_extension('thanks')
 client.load_extension('eh')
+client.load_extension('dabotlist')
 client.load_extension('randomgames')
 @client.event
 async def on_ready():
