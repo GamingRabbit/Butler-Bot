@@ -306,6 +306,13 @@ async def USRS():
 async def on_command_error(self, error: Exception):
     if isinstance(error, commands.CommandNotFound):
         await client.say("Error, command not found!")
-
+@client.command(hidden=True)
+async def STFU():
+    possible_responses = [
+        'https://youtu.be/OLpeX4RRo28',
+        'https://youtu.be/nc_LIR5ExIU'
+        
+    ]
+    await client.say(random.choice(possible_responses)) 
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
