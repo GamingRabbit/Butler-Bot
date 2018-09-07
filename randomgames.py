@@ -6,4 +6,9 @@ class rg():
         self.client = client
         
     @commands.command()
-    async def gg(self):
+    async def gg(self, message):
+        x = random.randint(1,3)
+        if message == x:
+            await client.say("You've Won  and guessed the number, here is your reward: a nice :cookie:")
+        else:
+            await client.say("Nope, wrong number")
