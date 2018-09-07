@@ -9,6 +9,8 @@ class rg():
     async def gg(self, message):
         x = random.randint(1,3)
         if message == x:
-            await client.say("You've Won  and guessed the number, here is your reward: a nice :cookie:")
+            await self.client.say("You've Won  and guessed the number, here is your reward: a nice :cookie:")
         else:
-            await client.say("Nope, wrong number")
+            await self.client.say("Nope, wrong number")
+def setup(client):
+    client.add_cog(rg(client))
