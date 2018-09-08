@@ -12,3 +12,7 @@ class Calculator():
     @commands.command(self)
     async def multiply(leftn : int, rightn : int):
         await self.client.say(leftn * rightn)
+        
+    @commands.command(self)
+    async def sub(leftn : int, rightn : int):
+        await self.client.say(leftn - rightn)
