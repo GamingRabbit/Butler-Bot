@@ -16,3 +16,6 @@ class Calculator():
     @commands.command(self)
     async def sub(leftn : int, rightn : int):
         await self.client.say(leftn - rightn)
+        
+def setup(client):
+    client.add_cog(Calculator(client))
