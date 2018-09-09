@@ -318,12 +318,12 @@ async def STFU():
     ]
     await client.say(random.choice(possible_responses))
     
-@Client.command(pass_context = True)
+@client.command(pass_context = True)
 async def clear(ctx, number):
     mgs = []
     number = int(number)
-    async for x in Client.logs_from(ctx.message.channel, limit = number):
+    async for x in client.logs_from(ctx.message.channel, limit = number):
         mgs.append(x)
-    await Client.delete_messages(mgs)
+    await client.delete_messages(mgs)
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
