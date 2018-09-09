@@ -10,7 +10,7 @@ class Don_t_Use_The_Default_Help_Command():
     async def Use_James_commands(self):
         await self.client.say("Use James,commands !")
         cter.counter +=1
-        await self.client.say("btw, you are the" + str(cter.counter) + "user who used this command")
+        await self.client.say("btw, you are the " + str(cter.counter) + " user who used this command")
         
 def setup(client):
     client.add_cog(Don_t_Use_The_Default_Help_Command(client))
