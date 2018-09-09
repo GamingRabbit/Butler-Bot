@@ -9,11 +9,11 @@ class Calculator():
     async def add(self, leftn : int, rightn : int):
         await self.client.say(leftn + rightn)
         
-    @commands.command()
-    async def multiply(self, leftn : int, rightn : int):
+    @commands.command(aliases=["multiply"])
+    async def multi(self, leftn : int, rightn : int):
         await self.client.say(leftn * rightn)
         
-    @commands.command()
+    @commands.command(aliases=["substract"])
     async def sub(self, leftn : int, rightn : int):
         await self.client.say(leftn - rightn)
         
