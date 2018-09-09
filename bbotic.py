@@ -319,6 +319,7 @@ async def STFU():
     await client.say(random.choice(possible_responses))
     
 @client.command(pass_context = True)
+@commands.has_permissions(delete_messages=True)
 async def clear(ctx, number):
     mgs = []
     number = int(number)
