@@ -21,6 +21,7 @@ client.load_extension('eh')
 client.load_extension('dabotlist')
 client.load_extension('randomgames')
 client.load_extension('calcu')
+client.load_extension('jc')
 @client.event
 async def on_ready():
     await client.change_presence(game=Game(name="Use James,commands"))
