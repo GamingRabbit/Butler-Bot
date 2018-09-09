@@ -1,11 +1,13 @@
 import discord
 from discord.ext import commands
+import cter
 
 class Don_t_Use_The_default_help_command():
     def __init__(self, client):
         self.client = client
     
-    @commands.command()
-    async def Use_James_commands():
-        await client.say("Use James,commands !")
-        
+    @commands.command(aliases=["halp"])
+    async def Use_James_commands(self):
+        await self.client.say("Use James,commands !")
+        cter.counter +=1
+        await self.client.say("btw, you are the" + counter "user who used this command")
