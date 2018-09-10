@@ -33,6 +33,8 @@ class Members():
       em.add_field(name='1.0.0', value='added some new cogs and made a new support server.\n')
       em.add_field(name='1.0.0.1', value='fixed the changelog')
       em.add_field(name='1.5.0', value='made a little calculator.')
+      em.add_field(name='.', value='.\n')
+      em.add_field(name='1.5.5', value='made a delete messages command')
       await self.client.say(embed=em)
 
 def setup(client):
