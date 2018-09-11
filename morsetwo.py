@@ -11,7 +11,7 @@ class Morse():
     
             
     
-    
+    code = morse.mtt()
     
     @commands.command()
     async def rcode(self, *, message):
