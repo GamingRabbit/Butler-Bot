@@ -334,5 +334,19 @@ async def ecosia(request):
     embed = discord.Embed(title = 'Results', decription = 'here is what I found', url = 'https://www.ecosia.org/search?q={}'.format(request))
     await client.say(embed = embed)'''
 
+@client.command()
+async def search(ctx, *, query):
+    search = query
+    URL = 'https://www.google.com/search?q='
+    words = search.split(" ")
+    num = 0
+    for w in words:
+        if num is 0:
+            URL = URL + w
+            num = 1
+        else:
+            URL = URL + "+"+ w
+    await client.send(URL)
+
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
