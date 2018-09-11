@@ -10,9 +10,8 @@ class Morse():
     async def wcode(self, txt, code):
         code = morse.mtt()
         for z in txt:
-            try:
-                await self.client.say(code[z])
-    
+            await self.client.say(code[z])
+            
     
     
     
