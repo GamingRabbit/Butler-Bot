@@ -5,7 +5,7 @@ class Members():
     def __init__(self, client):
         self.client = client
 
-    @commands.command()
+    @commands.command(pass_context = True)
     async def joined(self,ctx,member: discord.Member):
         if member == None:
             member = ctx.message.author            
