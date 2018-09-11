@@ -12,7 +12,7 @@ def mtt():
         
   code = {}
   for m in l:
-    w = l.split()
+    w = m.split()
     code[w[0]] = w[1]
         
   for i in range(97,123):
