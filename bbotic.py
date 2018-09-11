@@ -328,6 +328,9 @@ async def clear(ctx, number):
         await client.delete_messages(mgs)
     else:
         await client.say("you don't have the permissions to do that")
-        
+
+@client.command()
+async def ecosia(message):
+    embed = discord.Embed(title = 'search', decription = 'here is what I found', url = 'https://www.ecosia.org/search?q={}'.format(message))
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
