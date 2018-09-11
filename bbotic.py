@@ -346,7 +346,7 @@ async def search(ctx, *, query):
             num = 1
         else:
             URL = URL + "+"+ w
-    await client.send(URL)
+    await client.say(URL)
 
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
