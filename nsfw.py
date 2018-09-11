@@ -5,7 +5,7 @@ class nsfw():
     def __init__(self, client):
         self.client = client
  
-    @commands.command()
+    @commands.command(pass_context = True)
     async def rule34(self, ctx ,*,message):
         if 'nsfw' in ctx.message.channel:
             if message == None:
