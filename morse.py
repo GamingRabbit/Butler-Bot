@@ -11,7 +11,7 @@ def mtt():
   d.close
         
   code = {}
-  for l in morsetext:
+  for m in l:
     w = l.split()
     code[w[0]] = w[1]
         
