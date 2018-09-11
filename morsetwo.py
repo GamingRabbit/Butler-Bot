@@ -13,7 +13,7 @@ class Morse():
     
     code = morse.mtt()
     
-    @commands.command()
+    @commands.command(pass_context = True)
     async def rcode(self, ctx, code):
         mthree.wcode(ctx.message.content, code)
         
