@@ -6,7 +6,7 @@ class Morse():
     def __init__(self, client):
         self.client = client
         
-    
+    @property
     def wcode(self, txt, code):
         code = morse.mtt()
         for z in txt:
