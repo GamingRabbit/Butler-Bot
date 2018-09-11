@@ -208,7 +208,7 @@ async def grhrr():
 @client.command(pass_context=True)
 async def commands(ctx):
     await client.add_reaction(ctx.message,'\N{white heavy check mark}')
-    embed = discord.Embed(title="Commands:", description="  `ping`     shows the ping of the Bot\n `thanks`    shows the special thanks\n `Invite`    Invites the Bot\n `vote`    gives the link to vote the bot up on discordbots.org(why should you do this?!)\n `changelog`    shows the versions changelog\n `google`    googles something\n `ecosia`    searches something using ecosia\n `counter`    shows a little server info\n `rps`    Play Rock Paper scissors with the Bot\n `gg`    a simple guessing game(1 -3)\n `say`\n `double`    doubles a number\n `add`    adds two numbers together\n `multi`    multiplies two numbers\n `sub`    substracts two numbers\n `square`     squares a number\n `hey`     answers a question with yes or no \n `about`\n `clear`    deletes messages(range: 2 - 100)\n `kick`     kicks a member(role `kicker` required)\n `ban`    bans a member\n `joined`      gives out the jointime (in UTC)\n `info`    infos about a member\you\n\n\n", color=0x00ff00)
+    embed = discord.Embed(title="Commands:", description="  `ping`     shows the ping of the Bot\n `thanks`    shows the special thanks\n `Invite`    Invites the Bot\n `vote`    gives the link to vote the bot up on discordbots.org(why should you do this?!)\n `changelog`    shows the versions changelog\n `google`    googles something\n `counter`    shows a little server info\n `rps`    Play Rock Paper scissors with the Bot\n `gg`    a simple guessing game(1 -3)\n `say`\n `double`    doubles a number\n `add`    adds two numbers together\n `multi`    multiplies two numbers\n `sub`    substracts two numbers\n `square`     squares a number\n `hey`     answers a question with yes or no \n `about`\n `clear`    deletes messages(range: 2 - 100)\n `kick`     kicks a member(role `kicker` required)\n `ban`    bans a member\n `joined`      gives out the jointime (in UTC)\n `info`    infos about a member\you\n\n\n", color=0x00ff00)
     embed.set_footer(text="Use James,help (command) for more help with the command")
     await client.say(embed=embed)
     await client.send_message(ctx.message.author, embed=embed)
@@ -329,10 +329,6 @@ async def clear(ctx, number):
     else:
         await client.say("you don't have the permissions to do that")
 
-@client.command()
-async def ecosia(request):
-    embed = discord.Embed(title = 'Results', decription = 'here is what I found', url = 'https://www.ecosia.org/search?q={}'.format(request))
-    await client.say(embed = embed)
 
 @client.command()
 async def google(*, query):
