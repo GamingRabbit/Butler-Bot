@@ -46,7 +46,7 @@ async def counter(ctx):
     embed.add_field(name="Name", value=ctx.message.server.name)
     embed.add_field(name="Owner", value=ctx.message.server.owner.mention)
     embed.add_field(name="Members", value=ctx.message.server.member_count)
-    embed.add_field(name="Bot Users", value = f"{len(bot.users)}")
+    embed.add_field(name="Bot Users", value = ctx.message.server.bot.member_count)
     embed.set_thumbnail(url=ctx.message.server.icon_url)
     await client.say(embed=embed)
 
