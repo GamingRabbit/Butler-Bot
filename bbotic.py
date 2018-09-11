@@ -346,7 +346,7 @@ async def google(*, query):
             num = 1
         else:
             URL = URL + "+"+ w
-    embed = discord.embed(title = 'Results', url = URL)
+    embed = discord.Embed(title = 'Results', url = URL)
     await client.say(sembed = embed)
 
 client.loop.create_task(list_servers())
