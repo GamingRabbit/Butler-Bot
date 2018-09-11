@@ -8,7 +8,7 @@ class nsfw():
     @commands.command()
     async def rule34(self, ctx ,message):
         if 'nsfw' in ctx.message.channel:
-            if message == None:
+            if message.content == None:
                 await self.client.say('https://rule34.xxx/index.php?page=post&s=random')
             else:
                 await self.client.say('https://rule34.xxx/index.php?page=post&s=list&tags={}'.format(message))
