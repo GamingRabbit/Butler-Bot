@@ -331,7 +331,7 @@ async def clear(ctx, number):
 
 @client.command()
 async def ecosia(message):
-    embed = discord.Embed(title = 'search', decription = 'here is what I found', url = 'https://www.ecosia.org/search?q={}'.format(message))
+    embed = discord.Embed(title = '{}', decription = 'here is what I found', url = 'https://www.ecosia.org/search?q={}'.format(message))
     await client.say(embed = embed)
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
