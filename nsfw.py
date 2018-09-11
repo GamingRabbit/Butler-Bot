@@ -11,7 +11,7 @@ class nsfw():
             if message == None:
                 await self.client.say('https://rule34.xxx/index.php?page=post&s=random')
             else:
-                await self.client.say('https://rule34.xxx/index.php?page=post&s=list&tags={0}'.format(str(message)))
+                await self.client.say('https://rule34.xxx/index.php?page=post&s=list&tags={0}'.format(ctx.message.content))
                 
         else:
             await self.client.say("This channel doesn't has nsfw inside it's name. Please note that I can't check IF a nsfw channel is a nsfw channel. I can only check if 'nsfw' is in the channel name.") 
