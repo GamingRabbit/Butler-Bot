@@ -7,7 +7,7 @@ class Morse():
         self.client = client
         
     
-    def wcode(txt, code):
+   async def wcode(txt, code):
         for z in txt:
             try:
                 await self.client.say(code[z])
