@@ -14,7 +14,7 @@ class Morse():
     code = morse.mtt()
     
     @commands.command()
-    async def rcode(self, message : txt, code):
+    async def rcode(self, ctx, code):
         mthree.wcode(txt, code)
         
 def setup(client):
