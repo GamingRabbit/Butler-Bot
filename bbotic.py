@@ -329,9 +329,10 @@ async def clear(ctx, number):
     else:
         await client.say("you don't have the permissions to do that")
 
-@client.command()
+'''@client.command()
 async def ecosia(request):
     embed = discord.Embed(title = 'Results', decription = 'here is what I found', url = 'https://www.ecosia.org/search?q={}'.format(request))
-    await client.say(embed = embed)
+    await client.say(embed = embed)'''
+
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
