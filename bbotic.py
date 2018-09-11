@@ -335,7 +335,7 @@ async def ecosia(request):
     await client.say(embed = embed)'''
 
 @client.command()
-async def search(*, query):
+async def google(*, query):
     search = query
     URL = 'https://www.google.com/search?q='
     words = search.split(" ")
@@ -346,7 +346,8 @@ async def search(*, query):
             num = 1
         else:
             URL = URL + "+"+ w
-    await client.say(URL)
+    embed = discord.embed(title = 'Results', url = URL)
+    await client.say(sembed = embed)
 
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
