@@ -335,7 +335,7 @@ async def ecosia(request):
     await client.say(embed = embed)'''
 
 @client.command()
-async def search(ctx, *, query):
+async def search(*, query):
     search = query
     URL = 'https://www.google.com/search?q='
     words = search.split(" ")
