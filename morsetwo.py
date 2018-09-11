@@ -11,7 +11,7 @@ class Morse():
         for z in txt:
             try:
                 await self.client.say(code[z])
-        print()
+    
     
     code = morse.mtt()
     
