@@ -16,3 +16,6 @@ class Morse():
       for i in range(97,123):
         code[chr(i)] = code[chr(i - 32)]
       await self.client.say(code)
+    
+def setup(client):
+    client.add_cog(Morse(client))
