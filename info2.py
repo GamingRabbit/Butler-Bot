@@ -15,7 +15,7 @@ class Members():
         'Show info about a member'
         if member is None:
             member = ctx.message.author
-        em = discord.Embed()
+        em = discord.Embed(color=0x00ff00)
         em.add_field(name='Name', value='{0.name}'.format(member))
         em.add_field(name='ID', value='{0.id}'.format(member))
         em.add_field(name='Top Role', value='{0.top_role}'.format(member))
