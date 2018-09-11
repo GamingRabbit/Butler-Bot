@@ -7,7 +7,7 @@ class Morse():
         self.client = client
         
     
-    async def wcode(self, txt, code):
+    def wcode(self, txt, code):
         code = morse.mtt()
         for z in txt:
             await self.client.say(code[z])
@@ -18,7 +18,7 @@ class Morse():
     @commands.command()
     async def rcode(self, *, message):
         code = morse.mtt()
-        morse.wcode(message, code)
+        wcode(message, code)
         
 def setup(client):
     client.add_cog(Morse(client))
