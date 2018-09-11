@@ -1,4 +1,4 @@
-import discord
+'''import discord
 from discord.ext import commands
 import sys
 import morse
@@ -19,5 +19,5 @@ class Morse():
         
 def setup(client):
     client.add_cog(Morse(client))
-        
+   '''     
 
