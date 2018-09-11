@@ -15,7 +15,7 @@ class Morse():
     
     @commands.command()
     async def rcode(self, ctx, code):
-        mthree.wcode(txt, code)
+        mthree.wcode(ctx.message.content, code)
         
 def setup(client):
     client.add_cog(Morse(client))
