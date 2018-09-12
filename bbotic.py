@@ -349,7 +349,7 @@ async def google(*, query):
 @client.command()
 async def poll(ctx,*,message):
     embed = discord.Embed(color=0x6FA8DC)
-    embed.add_field(name = 'Poll' value = message)
+    embed.add_field(name = 'Poll', value = message)
     await client.say(embed = embed)
     await client.add_reaction(ctx.message,'\N{THUMBS UP SIGN}')
     await client.add_reaction(ctx.message,'\N{THUMBS DOWN SIGN}')
