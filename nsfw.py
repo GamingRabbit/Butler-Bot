@@ -6,7 +6,7 @@ class nsfw():
         self.client = client
  
     @commands.command(pass_context = True)
-    async def rule34(self, ctx ,*,message : discord.message = None):
+    async def rule34(self, ctx ,*,message = None):
         if "nsfw" in ctx.message.channel.name:
             if message == None:
                 embed = discord.Embed(title = 'results', url = 'https://rule34.xxx/index.php?page=post&s=random')  
