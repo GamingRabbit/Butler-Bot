@@ -347,7 +347,7 @@ async def google(*, query):
     await client.say(embed = embed)
 
 @client.command()
-async def poll(ctx,*,message):
+async def poll(*,message):
     embed = discord.Embed(color=0x6FA8DC)
     embed.add_field(name = 'Poll', value = message)
     await client.say(embed = embed)
