@@ -1,4 +1,4 @@
-'''import discord
+import discord
 from discord.ext import commands
 
 class nsfw():
@@ -7,7 +7,7 @@ class nsfw():
  
     @commands.command(pass_context = True)
     async def rule34(self, ctx ,*,message : discord.message):
-        if 'nsfw' in ctx.message.channel:
+        if 'nsfw' in ctx.message.channel.name:
             if message == None:
                 await self.client.say('https://rule34.xxx/index.php?page=post&s=random')
             else:
@@ -18,4 +18,4 @@ class nsfw():
 
             
 def setup(client):
-    client.add_cog(nsfw(client))'''
+    client.add_cog(nsfw(client))
