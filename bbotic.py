@@ -351,8 +351,8 @@ async def poll(ctx,*,message):
     embed = discord.Embed(color=0x6FA8DC)
     embed.add_field(name = 'Poll', value = message)
     await client.say(embed = embed)
-    await client.add_reaction(client.message,'\N{THUMBS UP SIGN}')
-    await client.add_reaction(client.message,'\N{THUMBS DOWN SIGN}')
+    await client.add_reaction(ctx.bot.message,'\N{THUMBS UP SIGN}')
+    await client.add_reaction(ctx.bot..message,'\N{THUMBS DOWN SIGN}')
     
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
