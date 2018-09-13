@@ -353,7 +353,8 @@ async def poll(*,message):
     embed = discord.Embed(color=0x6FA8DC)
     embed.add_field(name='poll', value = message)
     a = await client.say(embed = embed)
-    
+    await a.add_reaction('\n{THUMBS UP SIGN}')
+    await a.add_reaction('\n{THUMBS DOWN SIGN}')
     
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
