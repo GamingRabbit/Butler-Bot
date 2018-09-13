@@ -10,7 +10,7 @@ class nsfw():
         if "nsfw" in ctx.message.channel.name:
             if message == None:
                 embed = discord.Embed(title = 'results', url = 'https://rule34.xxx/index.php?page=post&s=random')
-                embed.set_icon(url = 'https://rule34.xxx/index.php?page=post&s=random') 
+                embed.set_thumbnail(url = 'https://rule34.xxx/index.php?page=post&s=random') 
                 await self.client.say(embed = embed)
             else:
                 embed = discord.Embed(title = 'results', url = 'https://rule34.xxx/index.php?page=post&s=list&tags={0}'.format(message))
