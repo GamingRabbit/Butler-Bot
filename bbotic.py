@@ -345,8 +345,6 @@ async def google(*, query):
             URL = URL + "+"+ w
     embed = discord.Embed(title = 'Results', url = URL)
     await client.say(embed = embed)
-    await a.add_reaction('\n{THUMBS UP SIGN}')
-    await a.add_reaction('\n{THUMBS DOWN SIGN}')
 
 
     
