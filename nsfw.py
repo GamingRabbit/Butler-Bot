@@ -13,7 +13,7 @@ class nsfw():
                 await self.client.say(embed = embed)
             else:
                 embed = discord.Embed(title = 'results', description="R34")
-                embed.set_thumbnail(url='https://rule34.xxx/index.php?page=dapi&s=post&q=index\tags={0}'.format(message)
+                embed.set_thumbnail(url='https://rule34.xxx/index.php?page=dapi&s=post&q=index\tags={0}'.format(message))
                 await self.client.say(embed = embed)
                 
         else:
