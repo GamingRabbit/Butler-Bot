@@ -345,7 +345,11 @@ async def google(*, query):
             URL = URL + "+"+ w
     embed = discord.Embed(title = 'Results', url = URL)
     await client.say(embed = embed)
-
+    
+@client.command()
+async def sayd(*,message):
+         await client.delete_message(message)
+         await client.say(message)
 
     
     
