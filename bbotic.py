@@ -348,7 +348,7 @@ async def google(*, query):
     
 @client.command()
 async def sayd(ctx,*,message):
-         await client.delete_message(ctx.message.channel,ctx.message)
+         await client.delete_message(ctx.message.channel,limit = 1)
          await client.say(message)
 
     
