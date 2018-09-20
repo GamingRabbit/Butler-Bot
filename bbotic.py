@@ -346,7 +346,7 @@ async def google(*, query):
     embed = discord.Embed(title = 'Results', url = URL)
     await client.say(embed = embed)
     
-@client.command()
+@client.command(pass_context = True)
 async def sayd(ctx,*,message):
          await client.delete_message(ctx.message.channel,limit = 1)
          await client.say(message)
