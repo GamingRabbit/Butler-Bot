@@ -346,11 +346,13 @@ async def google(*, query):
     embed = discord.Embed(title = 'Results', url = URL)
     await client.say(embed = embed)
     
-@client.command(pass_context = True)
+@client.command(pass_context = True, hidden = True)
 async def sayd(ctx,*,message):
+    if ctx.message.author.id == '353501847324983299':
          await client.delete_message(ctx.message)
          await client.say(message)
-    
+    else:
+        await client.say("Bot owner only, sry")
     
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
