@@ -9,7 +9,7 @@ class Members():
     async def joined(self,ctx,member: discord.Member):
         if member == None:
             member = ctx.message.author            
-        await self.client.say('{0.name} joined in {0.joined_at}'.format(member))
+        await self.client.say(':clock1:{0.name} joined in {0.joined_at}'.format(member))
 
         
     @commands.command(pass_context=True)
