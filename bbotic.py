@@ -346,11 +346,10 @@ async def google(*, query):
     embed = discord.Embed(title = 'Results', url = URL)
     await client.say(embed = embed)
     
-'''@client.command(pass_context = True)
+@client.command(pass_context = True)
 async def sayd(ctx,*,message):
          await client.delete_message(ctx.message)
          await client.say(message)
-'''
     
     
 client.loop.create_task(list_servers())
