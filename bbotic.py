@@ -173,7 +173,7 @@ async def ban(ctx, userName: discord.User):
     
 @client.command(pass_context = True)
 @commands.has_permissions(ban_members = True) 
-async def ban(ctx, userName: discord.User):
+async def unban(ctx, userName: discord.User):
     await client.unban(userName)
     await client.say("sucessfully unbanned, sir!")
 
