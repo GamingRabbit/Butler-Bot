@@ -159,17 +159,7 @@ async def ok_questionmark(context):
     ]
     await client.say(random.choice(possible_responses))    
 
-@client.command(pass_context = True)
-@commands.has_permissions(kick_members = True) 
-async def kick(ctx, userName: discord.User):
-    await client.kick(userName)
-    await client.say("sucessfully kicked, sir!")
-
-@client.command(pass_context = True)
-@commands.has_permissions(ban_members = True) 
-async def ban(ctx, userName: discord.User):
-    await client.ban(userName)
-    await client.say("sucessfully banned, sir!")    
+    
 
 @client.command()
 async def say(*,message):
