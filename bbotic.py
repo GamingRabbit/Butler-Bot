@@ -170,6 +170,12 @@ async def kick(ctx, userName: discord.User):
 async def ban(ctx, userName: discord.User):
     await client.ban(userName)
     await client.say("sucessfully banned, sir!")
+    
+@client.command(pass_context = True)
+@commands.has_permissions(ban_members = True) 
+async def ban(ctx, userName: discord.User):
+    await client.unban(userName)
+    await client.say("sucessfully unbanned, sir!")
 
 @client.command()
 async def say(*,message):
@@ -353,11 +359,8 @@ async def sayd(ctx,*,message):
          await client.say(message)
     else:
         await client.say("Bot owner only, sry")
-@client.command(pass_context = True)
-@commands.has_permissions(ban_members = True) 
-async def ban(ctx, userName: discord.User):
-    await client.unban(userName)
-    await client.say("sucessfully unbanned, sir!")
+        
+
     
 client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
