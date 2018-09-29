@@ -169,8 +169,7 @@ async def kick(ctx, userName: discord.User):
 @commands.has_permissions(ban_members = True) 
 async def ban(ctx, userName: discord.User):
     await client.ban(userName)
-    await client.say("sucessfully banned, sir!")
-    
+    await client.say("sucessfully banned, sir!")    
 
 @client.command()
 async def say(*,message):
