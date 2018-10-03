@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class Calculator():
+class support():
     def __init__(self, client):
         self.client = client
 
@@ -12,4 +12,4 @@ class Calculator():
         async def support(self):
           await client.say("join my support Server : https://discord.gg/Te6g5XF")
 def setup(client):
-    client.add_cog(Calculator(client))
+    client.add_cog(support(client))
