@@ -11,3 +11,5 @@ class Calculator():
         @commands.command()
         async def support(self):
           await client.say("join my support Server : https://discord.gg/Te6g5XF")
+def setup(client):
+    client.add_cog(Calculator(client))
