@@ -15,7 +15,7 @@ class rds():
             "He",
             "She"
         ]
-        wordII[
+        wordII=[
             "will",
             "wont"]
         await self.client.say(random.choice(wordI)+random.choice(wordII))
