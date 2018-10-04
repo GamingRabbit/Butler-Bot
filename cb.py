@@ -15,7 +15,10 @@ class rds():
             "He",
             "She"
         ]
-        await self.client.say(random.choice(wordI))
+        wordII[
+            "will",
+            "wont"]
+        await self.client.say(random.choice(wordI)+random.choice(wordII))
         
 def setup(client):
     client.add_cog(rds(client))
