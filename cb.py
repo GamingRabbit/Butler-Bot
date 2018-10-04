@@ -16,3 +16,6 @@ class rds():
             "She"
         ]
         await self.client.say(random.choice(wordI))
+        
+def setup(client):
+    client.add_cog(rds(client))
