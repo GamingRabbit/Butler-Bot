@@ -23,6 +23,8 @@ client.load_extension('randomgames')
 client.load_extension('calcu')
 client.load_extension('jc')
 client.load_extension('nsfw')
+client.load_extension('cb')
+client.load_extension('support')
 @client.event
 async def on_ready():
     await client.change_presence(game=Game(name="Use James,commands"))
