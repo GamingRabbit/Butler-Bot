@@ -6,7 +6,7 @@ class rds():
     def __init__(self, client):
         self.client = client
 
-    @commands.commands()
+    @commands.command()
     async def rs(self):
         wordI=[
             "I",
