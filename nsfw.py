@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import json
+import aiohttp
 
 class nsfw():
     def __init__(self, client):
