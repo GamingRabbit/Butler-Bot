@@ -16,7 +16,7 @@ class nsfw():
                 buffer = io.BytesIO(await resp.read())
         channel = ctx.message.channel
 
-        await client.send_file(channel, fp=buffer, filename="Image")
+        await self.client.send_file(channel, fp=buffer, filename="Image")
             
 def setup(client):
     client.add_cog(nsfw(client))
