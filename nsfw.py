@@ -11,10 +11,11 @@ class nsfw():
     async def rule34(self, ctx ,*,message = None):
         url = 'https://rule34.xxx/index.php?page=dapi&s=post&q=index'
         async with aiohttp.ClientSession() as session:
-            raw_response = await session.get(url)
-            response = await raw_response.text()
-            response = json.loads(response)
-            await client.say(response)
+            async with session.get("https://rule34.xxx/index.php?page=dapi&s=post&q=index") as resp:
+                buffer = io.BytesIO(await resp.read())
+        channel = ctx.message.channel
+
+        await client.send_file(channel, fp=buffer, filename="Image")
             
 def setup(client):
     client.add_cog(nsfw(client))
