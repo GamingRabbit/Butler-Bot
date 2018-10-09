@@ -1,4 +1,4 @@
-'''import discord
+import discord
 from discord.ext import commands
 import json
 import aiohttp
@@ -15,9 +15,11 @@ class nsfw():
             async with session.get("https://rule34.xxx/index.php?page=dapi&s=post&q=index") as resp:
                 buffer = io.BytesIO(await resp.read())
         channel = ctx.message.channel
-
+        embed = discord.Embed(title = "NSFW")
+        embed.set_thumbnail(fp = buffer)
+        await client.say(embed = embed)
         await self.client.send_file(channel, fp=buffer, filename="Image")
             
 def setup(client):
     client.add_cog(nsfw(client))
-'''
+
