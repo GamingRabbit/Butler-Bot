@@ -12,7 +12,7 @@ class nsfw():
         url = 'https://rule34.xxx/index.php?page=dapi&s=post&q=index'
         async with aiohttp.ClientSession() as session:
             raw_response = await session.get(url)
-            response = await raw_response.image()
+            response = await raw_response.file()
             response = json.loads(response)
             await client.say(response)
             
