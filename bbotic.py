@@ -22,7 +22,7 @@ client.load_extension('dabotlist')
 client.load_extension('randomgames')
 client.load_extension('calcu')
 client.load_extension('jc')
-client.load_extension('nsfw')
+'''client.load_extension('nsfw')'''
 client.load_extension('cb')
 client.load_extension('support')
 @client.event
