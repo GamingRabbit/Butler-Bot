@@ -1,4 +1,4 @@
-import discord
+'''import discord
 from discord.ext import commands
 import json
 import aiohttp
@@ -23,3 +23,4 @@ class nsfw():
 def setup(client):
     client.add_cog(nsfw(client))
 
+'''
