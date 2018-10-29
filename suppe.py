@@ -8,8 +8,8 @@ class sport():
 
 
 
-        @commands.command()
-        async def support(self):
-          await self.client.say("join my support Server : https://discord.gg/Te6g5XF")
+     @commands.command()
+     async def support(self):
+       await self.client.say("join my support Server : https://discord.gg/Te6g5XF")
 def setup(client):
     client.add_cog(sport(client))
