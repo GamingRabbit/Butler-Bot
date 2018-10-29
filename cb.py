@@ -23,10 +23,14 @@ class rds():
             "destroy",
             "kill",
             "buy you a",
+            "buy you",
             "paint your face green, print a toothbrush, record a video with it and make a toast for"
         ]
         wordIIII=[
             "Donald Trump",
+            "Donald Duck",
+            "Donald Truck",
+            "Thomas the tank engine",
             "You",
             "Me",
             "it",
