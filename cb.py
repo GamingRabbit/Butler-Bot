@@ -13,7 +13,9 @@ class rds():
             "You",
             "It",
             "He",
-            "She"
+            "She",
+            "Donald Trump",
+            "A toast"
         ]
         wordII=[
             "will",
