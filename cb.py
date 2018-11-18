@@ -26,6 +26,7 @@ class rds():
             "kill",
             "buy you a",
             "buy you",
+            "sell",
             "paint your face green, print a toothbrush, record a video with it and make a toast for",
             "take",
             "hack",
