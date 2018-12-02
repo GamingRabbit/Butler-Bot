@@ -234,12 +234,14 @@ async def Terminal(ctx):
 
 @client.command(pass_context=True, hidden=True)
 async def stdown(ctx):
+    channel = discord.Object(id='513694289117577216')
     if ctx.message.author.id == '353501847324983299':
         await client.say("shutting down...")
         await client.logout()
     else:
         await client.say("You don't have the permission to do this!!!!")
         print(ctx.message.author, "tried to shut me down!")
+        await client.send_message(channel, "{} tried to shut me down!!!".format(ctx.message.author))
 
 @client.command(pass_context=True,hidden=True,aliases = ["state"])
 async def status(ctx,*,message):
