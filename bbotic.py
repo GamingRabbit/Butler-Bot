@@ -220,7 +220,7 @@ async def commands(ctx):
 @client.command(pass_context=True, hidden=True)
 async def Terminal(ctx):
     counter = 0
-    channel = discord.Object(id='477465945057525760')
+    channel = discord.Object(id='513694289117577216')
     counter += 1
     await client.send_message(channel," ---------------------------")
     await client.send_message(channel,"`Butler Bot Main Terminal`")
