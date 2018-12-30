@@ -6,8 +6,8 @@ class rds():
     def __init__(self, client):
         self.client = client
 
-    @commands.command(hidden=True)
-    async def rs(self):
+    @commands.command(hidden=True, pass_context=True)
+    async def rs(self,ctx):
         wordI=[
             "I",
             "You",
