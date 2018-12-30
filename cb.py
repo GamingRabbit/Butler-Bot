@@ -55,7 +55,10 @@ class rds():
             "Butler Bot",
             "Battlefield V"
         ]
-        await self.client.say(random.choice(wordI)+" "+random.choice(wordII)+" "+random.choice(wordIII)+" "+random.choice(wordIIII))
+        if ctx.message.author.id == '353501847324983299': 
+            await self.client.say(random.choice(wordI)+" "+random.choice(wordII)+" "+random.choice(wordIII)+" "+random.choice(wordIIII))
+        else:
+            await client.say("?")
         
 def setup(client):
     client.add_cog(rds(client))
